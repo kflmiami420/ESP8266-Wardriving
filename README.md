@@ -48,34 +48,43 @@ Data Visualization Tutorial: https://www.youtube.com/watch?v=pFHUPs51CRQ
 
 Here's a breakdown of the code:
 
-Library inclusions:
+The provided code appears to be an Arduino sketch written for an ESP8266-based device. It involves using various libraries to perform tasks such as displaying information on an SSD1306 OLED screen, connecting to Wi-Fi networks, reading GPS data using TinyGPS++, and logging network information to an SD card.
 
-Adafruit_SSD1306.h: Library for controlling the SSD1306 OLED display.
-ESP8266WiFi.h: Library for connecting to Wi-Fi networks using the ESP8266 module.
-SD.h: Library for interacting with SD cards.
-SoftwareSerial.h: Library for software-based serial communication.
-TinyGPS++.h: Library for parsing NMEA data from GPS modules.
-TimeLib.h: Library for time-related functions.
-Definitions and global variables:
+Here's a breakdown of the code:
 
-UTC_offset: The offset in hours from UTC time to the local time zone (in this case, PDT, which is UTC-7).
-SD_CS: The pin number for the chip select line of the SD card module.
-logFileName: The name of the log file to be created on the SD card.
-networks: A counter variable to keep track of the number of Wi-Fi networks found.
-LOG_RATE: The time interval (in milliseconds) for logging network information.
-currentTime: A character array used to store the current time.
-Setup function:
+1. Library inclusions:
+   - `Adafruit_SSD1306.h`: Library for controlling the SSD1306 OLED display.
+   - `ESP8266WiFi.h`: Library for connecting to Wi-Fi networks using the ESP8266 module.
+   - `SD.h`: Library for interacting with SD cards.
+   - `SoftwareSerial.h`: Library for software-based serial communication.
+   - `TinyGPS++.h`: Library for parsing NMEA data from GPS modules.
+   - `TimeLib.h`: Library for time-related functions.
 
-Initializes the serial communication for debugging purposes.
-Sets up the SSD1306 display.
-Configures Wi-Fi in station mode and disconnects any previous connections.
-Initializes the SD card and checks if it is present. If not found, it halts the execution.
-Initializes the software serial communication with the GPS module.
-Waits for the GPS module to provide a valid fix.
-Displays the GPS coordinates on the OLED screen.
-Clears the display.
-lookForNetworks function:
+2. Definitions and global variables:
+   - `UTC_offset`: The offset in hours from UTC time to the local time zone (in this case, PDT, which is UTC-7).
+   - `SD_CS`: The pin number for the chip select line of the SD card module.
+   - `logFileName`: The name of the log file to be created on the SD card.
+   - `networks`: A counter variable to keep track of the number of Wi-Fi networks found.
+   - `LOG_RATE`: The time interval (in milliseconds) for logging network information.
+   - `currentTime`: A character array used to store the current time.
 
+3. Setup function:
+   - Initializes the serial communication for debugging purposes.
+   - Sets up the SSD1306 display.
+   - Configures Wi-Fi in station mode and disconnects any previous connections.
+   - Initializes the SD card and checks if it is present. If not found, it halts the execution.
+   - Initializes the software serial communication with the GPS module.
+   - Waits for the GPS module to provide a valid fix.
+   - Displays the GPS coordinates on the OLED screen.
+   - Clears the display.
+
+4. `lookForNetworks` function:
+   - Updates the current time on the OLED display.
+   - Draws lines to separate the time display from the network information.
+   - Scans for available Wi-Fi networks.
+   - If networks are found, it loops through each network, updates the OLED display, and logs the BSSID and SSID of the network to the SD card.
+
+The code you provided is incomplete, as the comment suggests that there is more code following the logging of network information to the SD card. If you have further questions or need assistance with the remaining part of the code, please provide it, and I'll be happy to help. 
 Updates the current time on the OLED display.
 Draws lines to separate the time display from the network information.
 Scans for available Wi-Fi networks.
