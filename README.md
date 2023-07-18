@@ -39,4 +39,7 @@ Any ESP8266-based board should work with the basic required components, but the 
 
 ## Data Visualization Scripts
 
+
+## Additional Boards Manager URL  https://arduino.esp8266.com/stable/package_esp8266com_index.json
+
 Data Visualization Tutorial: https://www.youtube.com/watch?v=pFHUPs51CRQ
