@@ -48,7 +48,7 @@ Data Visualization Tutorial: https://www.youtube.com/watch?v=pFHUPs51CRQ
 
 Here's a breakdown of the code:
 
-The provided code appears to be an Arduino sketch written for an ESP8266-based device. It involves using various libraries to perform tasks such as displaying information on an SSD1306 OLED screen, connecting to Wi-Fi networks, reading GPS data using TinyGPS++, and logging network information to an SD card.
+The Arduino sketch written for an ESP8266-based device. It involves using various libraries to perform tasks such as displaying information on an SSD1306 OLED screen, connecting to Wi-Fi networks, reading GPS data using TinyGPS++, and logging network information to an SD card.
 
 Here's a breakdown of the code:
 
@@ -84,7 +84,7 @@ Here's a breakdown of the code:
    - Scans for available Wi-Fi networks.
    - If networks are found, it loops through each network, updates the OLED display, and logs the BSSID and SSID of the network to the SD card.
 
-The code you provided is incomplete, as the comment suggests that there is more code following the logging of network information to the SD card. If you have further questions or need assistance with the remaining part of the code, please provide it, and I'll be happy to help. 
+ 
 Updates the current time on the OLED display.
 Draws lines to separate the time display from the network information.
 Scans for available Wi-Fi networks.
